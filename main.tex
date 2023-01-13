@@ -1,0 +1,176 @@
+%%%%%%%%%%%%%%%%%
+% * <shrabanipanigrahi@gmail.com> 2018-06-25T16:57:48.502Z:
+%
+% ^.
+% This is an sample CV template created using altacv.cls
+% (v1.1.3, 30 April 2017) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+% 
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons 
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages. 
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% 
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font 
+%% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm,footskip=2\baselineskip}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{darkblue}{HTML}{00394d}
+\definecolor{Mulberry}{HTML}{005c99}
+\definecolor{SlateGrey}{HTML}{000000}
+\definecolor{LightGrey}{HTML}{333333}
+\colorlet{heading}{darkblue}
+\colorlet{accent}{Mulberry}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Amiya Kiran }
+\tagline{Web Developer (MEAN Stack)}
+\photo{3cm}{pho1}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{amiyakiran196@gmail.com}
+  \phone{9447575802}
+  \location{Kerala, India}
+  \github{github.com/Amiyakiran}
+ 
+  
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+%   \orcid{orcid.org/0000-0000-0000-0000}
+}
+
+%% Make the header extend all the way to the right, if you want. 
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Experience}
+
+\cvevent{MEAN Stack developer Intern}{Luminar Technolab}{oct 2022- Present,} {kochi}
+\begin{itemize}
+\item Learn how to user Mongodb.
+\item learn how to use node.js and its framework express.js
+\item Made exprience in the field of Angular, TypeScript, and Angular material UI.
+\item Take in the method of API service calls.
+\item Made a grasp on Netlify.com to deploy websites.
+\item Build a beginer knowledge on React.js and wordpress.
+\end{itemize}
+\medskip
+
+\divider
+\medskip
+
+\cvevent{Front end Developer Intern}{TBI}{2016 --2017, } {Trivandrum}
+\begin{itemize}
+\item Developed an understanding on HyperText Markup Language(HTML) and Cascading Style Sheets(CSS).
+\item Made responsive websites using Bootstrap
+\item Build a good Understanding on JavaScript
+
+\end{itemize}
+\medskip
+\bigskip
+\vspace{5mm}
+
+
+%\vspace{2mm}
+\cvsection{RECENT PROJECTS}
+
+%\cvachievement{\faTrophy}{GAT of the year 2014-15 VBI}{For %hardwork and effort behind Project Pre-Study of 9530 Europe %Bus Project,2015}
+
+%\divider
+
+\cvachievement{\faTrophy}{Online Banking Application}{Complete project using Angular, Express.js, and Mongodb}
+
+\divider
+
+\cvachievement{\faTrophy}{Contact Management Application}{Using Angular and API call}
+\divider
+
+\cvachievement{\faTrophy}{Real time Weather Forecast}{Two projects, one made in  Angular and the other made in HTML, CSS and JavaScript (AJAX call)}
+\divider
+
+\cvachievement{\faTrophy}{Random User Generator}{Mini Angular Project}
+
+\divider
+
+\cvachievement{\faTrophy}{Cafe/Restaurant website}{Basic tool used in this project is HTML, CSS and JavaScript}
+
+\divider
+
+\cvachievement{\faTrophy}{Travel Website}{Using HyperText Markup Language(HTML) and Cascading Style Sheets(CSS)}\textbf{}
+
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+%\wheelchart{1.5cm}{0.5cm}{%
+  %5/8em/accent!30/{Project Management}, 
+  %3/8em/accent!40/Process Planning,
+  %7/8em/accent!60/PDM PLM,
+ % 5.5/10em/accent/Project Pre-Study,
+  %3.5/6em/accent!50/CAD
+%}
+
+\vspace{7mm}
+
+
+
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the 
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+%%\addnextpagesidebar[-1ex]{page3sidebar}
+
+\end{document}
